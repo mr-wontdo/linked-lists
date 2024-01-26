@@ -16,4 +16,10 @@ export default class LinkedList {
             pointer.nextNode = new Node(value);
         }
     }
+
+    prepend(value) {
+        let pointer = this.headNode;
+        this.headNode = new Node(value);
+        this.headNode.nextNode = pointer;
+    }
 }
