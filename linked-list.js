@@ -32,4 +32,8 @@ export default class LinkedList {
         }
         return count;
     }
+
+    head() {
+        return this.headNode;
+    };
 }
