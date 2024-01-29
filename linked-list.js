@@ -36,4 +36,12 @@ export default class LinkedList {
     head() {
         return this.headNode;
     };
+
+    tail() {
+        let pointer = this.headNode;
+        while (pointer.nextNode) {
+            pointer = pointer.nextNode;
+        }
+        return pointer;
+    }    
 }
