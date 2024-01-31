@@ -53,4 +53,12 @@ export default class LinkedList {
         }
         return pointer;
     }
+
+    pop() {
+        let pointer = this.headNode;
+        while (pointer.nextNode.nextNode) {
+            pointer = pointer.nextNode;
+        }
+        pointer.nextNode = null;
+    }
 }
