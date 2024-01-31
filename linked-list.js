@@ -44,4 +44,13 @@ export default class LinkedList {
         }
         return pointer;
     }    
+
+    at(index) {
+        let pointer = this.headNode;
+        for (let i = 0; i < index; i++) {
+            pointer = pointer.nextNode;
+            if (pointer === null) return 'No value at this index.'
+        }
+        return pointer;
+    }
 }
