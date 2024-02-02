@@ -61,4 +61,13 @@ export default class LinkedList {
         }
         pointer.nextNode = null;
     }
+
+    contains(value) {
+        let pointer = this.headNode;
+        while (pointer) {
+            if (pointer.value === value) return true;
+            pointer = pointer.nextNode;
+        }
+        return false;
+    }
 }
