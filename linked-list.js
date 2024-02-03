@@ -70,4 +70,15 @@ export default class LinkedList {
         }
         return false;
     }
+    
+    find(value) {
+        let index = 0;
+        let pointer = this.headNode;
+        while (pointer) {
+            if (pointer.value === value) return index;
+            index++;
+            pointer = pointer.nextNode;
+        }
+        return null;
+    }
 }
