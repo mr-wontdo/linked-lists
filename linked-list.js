@@ -81,4 +81,14 @@ export default class LinkedList {
         }
         return null;
     }
+
+    toString() {
+        let string = '';
+        let pointer = this.headNode;
+        while (pointer) {
+            string += `(${pointer.value}) -> `
+            pointer = pointer.nextNode;
+        }
+        return string += 'null'
+    }
 }
