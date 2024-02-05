@@ -91,4 +91,19 @@ export default class LinkedList {
         }
         return string += 'null'
     }
+
+    insertAt(value, index) {
+        let pointer = this.headNode;
+        if (index === 0) {
+            this.prepend(value);
+        } else {
+            for (let i = 0; i < index - 1; i++) {
+                if (pointer.nextNode === null) break;
+                pointer = pointer.nextNode;
+            }
+            let tmpNode = pointer.nextNode;
+            pointer.nextNode = new Node(value);
+            pointer.nextNode.nextNode = tmpNode;
+        }
+    }
 }
