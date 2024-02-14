@@ -106,4 +106,20 @@ export default class LinkedList {
             pointer.nextNode.nextNode = tmpNode;
         }
     }
+
+    removeAt(index) {
+        let pointer = this.headNode;
+        if (index === 0) {
+            this.headNode = pointer.nextNode;
+        } else {
+            for (let i = 0; i < index - 1; i++) {
+                pointer = pointer.nextNode;
+                if (pointer.nextNode === null) {
+                    console.log('No value at this index.');
+                    return;
+                };
+            }
+            pointer.nextNode = pointer.nextNode.nextNode;
+        }
+    }
 }
